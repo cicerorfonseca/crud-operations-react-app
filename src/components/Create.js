@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { Button, Checkbox, Form } from 'semantic-ui-react';
 
 function Create() {
@@ -7,9 +8,11 @@ function Create() {
   const [userAgree, setUserAgree] = useState('');
 
   const postData = () => {
-    console.log(firstName);
-    console.log(lastName);
-    console.log(userAgree);
+    axios.post('https://6106a8231f348700174379e7.mockapi.io/api/v1/crudReactAppData/', {
+      firstName,
+      lastName,
+      userAgree,
+    });
   };
 
   return (
