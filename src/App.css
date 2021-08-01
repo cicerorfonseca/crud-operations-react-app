@@ -33,3 +33,7 @@ header {
   color: whitesmoke !important;
   font-size: 12px !important;
 }
+
+.ui.table th button {
+  width: 100%;
+}
